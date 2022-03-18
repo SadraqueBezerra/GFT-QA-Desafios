@@ -1,3 +1,14 @@
+/*Desafio
+Tento como base a hora inicial e final de um jogo, calcule a duração do dele, sabendo que o mesmo pode começar em um dia 
+e terminar em outro, tendo uma duração mínima de, 60 minutos e máxima de 24 horas.
+
+Entrada
+A entrada contém dois valores inteiros representando a hora de início e a hora de fim do jogo.
+
+Saída
+Apresente a duração do jogo conforme exemplo abaixo.
+*/
+
 package br.dio.desafios;
 
 import java.util.Scanner;
@@ -5,7 +16,7 @@ import java.util.Scanner;
 public class DesafioSeis {
 	public static void main(String[] args) {
 
-		// complete os espa�os em branco com sua solu��o para o problema
+		// complete os espaços em branco com sua solução para o problema
 
 		try (Scanner scan = new Scanner(System.in)) {
 			int inicio, fim, horas = 0;
