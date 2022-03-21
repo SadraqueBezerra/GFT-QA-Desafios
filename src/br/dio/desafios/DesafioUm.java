@@ -18,7 +18,7 @@ package br.dio.desafios;
 
 import java.util.Scanner;
 
-public class Desafio1 {
+public class DesafioUm {
 
 	public static void main(String[] args) {
 		int minutos;
