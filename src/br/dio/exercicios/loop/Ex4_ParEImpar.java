@@ -8,31 +8,31 @@ import java.util.Scanner;
 
 public class Ex4_ParEImpar {
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
-		
-		int quantNumeros;
-		int numero;
-		int quantPares = 0, quantImpares = 0;
-		
-		System.out.println("Quantidade de Números: ");
-		quantNumeros = scan.nextInt();
-		
-		
-		int count = 0;
-		do {
-			System.out.println("Número: ");
-			numero = scan.nextInt();
+		try (Scanner scan = new Scanner(System.in)) {
+			int quantNumeros;
+			int numero;
+			int contadorNumeros = 1;
+			int quantPares = 0, quantImpares = 0;
 			
-			if (numero % 2 == 0) quantPares++;
-			else quantImpares++;
+			System.out.println("Quantidade de Números: ");
+			quantNumeros = scan.nextInt();
 			
-			count++;
 			
-		} while(count < quantNumeros);
-		
-		System.out.println("\nQuantidade de Pares: " + quantPares);
-		System.out.println("Quantidade de Impares: " + quantImpares);
-		
+			int count = 0;
+			do {
+				System.out.println("Número " + contadorNumeros + " = ");
+				numero = scan.nextInt();
+				
+				if (numero % 2 == 0) quantPares++;
+				else quantImpares++;
+				
+				count++;
+				contadorNumeros++;
+				
+			} while(count < quantNumeros);
+			
+			System.out.println("\nQuantidade de Pares: " + quantPares);
+			System.out.println("Quantidade de Impares: " + quantImpares);
+		}
 	}
-
 }

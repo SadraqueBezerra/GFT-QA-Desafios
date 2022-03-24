@@ -8,30 +8,30 @@ public class Ex3_MaiorEMedia {
 	
 	public static void main(String[] args) {
 		
-		Scanner scan = new Scanner (System.in);
-		
-		int numero;
-		int maior = 0;
-		int soma = 0;
-		int media = 0;
-		
-		int count = 0;
-		
-		do {
+		try (Scanner scan = new Scanner (System.in)) {
+			int numero;
+			int maior = 0;
+			int soma = 0;
+			int media = 0;
 			
-			System.out.println("Número: ");
-			numero = scan.nextInt();
+			int count = 0;
 			
-			soma = soma + numero;
+			do {
+				
+				System.out.println("Número: ");
+				numero = scan.nextInt();
+				
+				soma = soma + numero;
+				
+				if (numero > maior) maior = numero;
+				
+				count++;
+				media++;
 			
-			if (numero > maior) maior = numero;
+			} while(count < 5);
 			
-			count++;
-			media++;
-		
-		} while(count < 5);
-		
-		System.out.println("\nMaior: " + maior);
-		System.out.println("Média: " + soma/media);
+			System.out.println("\nMaior: " + maior);
+			System.out.println("Média: " + soma/media);
+		}
 	}
 }

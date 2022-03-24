@@ -26,26 +26,27 @@ import java.util.Scanner;
 public class DesafioNove{
 	
     public static void main(String[] args) throws IOException {
-		Scanner leitor = new Scanner(System.in);
-		
-		int N = leitor.nextInt();
-		int T, menor = 0, posMenor = 0;
-		
-		for (int i = 1; i <= N; i++) {
-			T = leitor.nextInt();
+		try (Scanner leitor = new Scanner(System.in)) {
+			int N = leitor.nextInt();
+			int T, menor = 0, posMenor = 0;
 			
-			if (i == 1) {
-				posMenor = 1;
-				menor = T;
+			for (int i = 1; i <= N; i++) {
+				T = leitor.nextInt();
 				
-			} else if (T < menor) {
-				posMenor = i;
-				menor = T;
-				
+				if (i == 1) {
+					posMenor = 1;
+					menor = T;
+					
+				} else if (T < menor) {
+					posMenor = i;
+					menor = T;
+					
+				}
 			}
+			
+			System.out.println(posMenor);
 		}
 		
-		System.out.println(posMenor);
     
     }	
 }
